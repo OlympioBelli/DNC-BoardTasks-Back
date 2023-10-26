@@ -15,7 +15,7 @@ async function authDocProducao(req,  res, next) {
     } 
 
     // se o usuário não está no localhost ele deve digitar uma senha, aqui ele verifica se a senha está correta
-    if (senhaDigitada === process.env.SWAGGER_SENHA_DOC) {
+    if (senhaDigitada == process.env.SWAGGER_SENHA_DOC) {
         return next();
     }
 

@@ -11,11 +11,11 @@ async function authDocProducao(req,  res, next) {
     //verifica se o sevidor está no localhost, se ele estiver não é necessário senha
     // e também te envia para a página de carregamento da documentação em caso da senha correta
     if (req.headers.host.includes('localhost') || req.originalUrl !== "/doc/") {
-         return next();
+        return next();
     } 
 
     // se o usuário não está no localhost ele deve digitar uma senha, aqui ele verifica se a senha está correta
-    if (senhaDigitada == process.env.SWAGGER_SENHA_DOC) {
+    if (senhaDigitada === process.env.SWAGGER_SENHA_DOC) {
         return next();
     }
 

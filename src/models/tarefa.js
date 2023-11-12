@@ -34,5 +34,7 @@ const esquema = new mongoose.Schema(
 
 )
 
+//No usuariocriador, o ref está referenciado com a collection Usuario
+
 const EsquemmaTarefa = mongoose.models.Tarefa || mongoose.model('Tarefa', esquema)
 module.exports = EsquemmaTarefa;

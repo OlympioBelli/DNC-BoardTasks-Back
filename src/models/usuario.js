@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
+
+
+// unique o campo é único no banco de dados
 const esquema = new mongoose.Schema(
     {
         nome: {
